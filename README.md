@@ -1,39 +1,40 @@
-# ModDota template
+# Шаблон ModDota
 
-A template for Dota 2 Custom Games built with modern technologies.
+Шаблон для пользовательских игр Dota 2, созданный с использованием современных технологий.
 
-[This tutorial](https://moddota.com/scripting/Typescript/typescript-introduction/) explains how to set up and use the template.
+[В этом руководстве](https://moddota.com/scripting/Typescript/typescript-introduction/) объясняется, как настроить и использовать шаблон.
 
-The template includes:
+Шаблон включает:
 
-- [TypeScript for Panorama](https://moddota.com/panorama/introduction-to-panorama-ui-with-typescript)
-- [TypeScript for VScripts](https://typescripttolua.github.io/)
-- Simple commands to build and launch your custom game
-- [Continuous Integration](#continuous-integration) support
+- [TypeScript для Panorama](https://moddota.com/panorama/introduction-to-panorama-ui-with-typescript)
+- [TypeScript для VScripts](https://typescripttolua.github.io/)
+- Простые команды для сборки и запуска вашей пользовательской игры
+- Поддержка [Continuous Integration](#continuous-integration)
 
-## Getting Started
+## Начало работы
 
-1. Clone this repository or, if you're planning to have a repository for your custom game on GitHub, [create a new repository from this template](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) and clone it instead.
-2. Open the directory of your custom game and change `name` field in `package.json` file to the name of your addon name.
-3. Open terminal in that directory and run `npm install` to install dependencies. You also should run `npm update` once in a while to get tool updates.
+1. Клонируйте этот репозиторий или, если вы планируете создать репозиторий для вашей пользовательской игры на GitHub, [создайте новый репозиторий из этого шаблона](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) и клонируйте его вместо этого.
+2. Откройте каталог вашей пользовательской игры и измените поле `name` в файле `package.json` на имя вашего дополнения.
+3. Откройте терминал в этом каталоге и запустите `npm install`, чтобы установить зависимости. Вам также следует время от времени запускать `npm update`, чтобы получать обновления инструментов.
 
-After that you can press `Ctrl+Shift+B` in VSCode or run `npm run dev` command in terminal to compile your code and watch for changes.
+После этого вы можете нажать `Ctrl+Shift+B` в VSCode или запустить команду `npm run dev` в терминале, чтобы скомпилировать свой код и следить за изменениями.
 
-## Contents:
+## Содержание:
 
-* **[src/common]:** TypeScript .d.ts type declaration files with types that can be shared between Panorama and VScripts
-* **[src/vscripts]:** TypeScript code for Dota addon (Lua) vscripts. Compiles lua to game/scripts/vscripts.
-* **[src/panorama]:** TypeScript code for panorama UI. Compiles js to content/panorama/scripts/custom_game
-
---
-
-* **[game/*]:** Dota game directory containing files such as npc kv files and compiled lua scripts.
-* **[content/*]:** Dota content directory containing panorama sources other than scripts (xml, css, compiled js)
+* **[src/common]:** Файлы объявлений типов TypeScript .d.ts с типами, которые могут быть общими для Panorama и VScripts
+* **[src/vscripts]:** Код TypeScript для vscripts дополнения Dota (Lua). Компилирует lua в game/scripts/vscripts.
+* **[src/panorama]:** Код TypeScript для UI панорамы. Компилирует js в content/panorama/scripts/custom_game
 
 --
 
-* **[scripts/*]:** Repository installation scripts
+* **[game/*]:** Каталог игры Dota, содержащий такие файлы, как файлы npc kv и скомпилированные скрипты lua.
+* **[content/*]:** Каталог контента Dota, содержащий исходные файлы панорамы, отличные от скриптов (xml, css, скомпилированный js)
 
-## Continuous Integration
+--
 
-This template includes a [GitHub Actions](https://github.com/features/actions) [workflow](.github/workflows/ci.yml) that builds your custom game on every commit and fails when there are type errors.
+* **[scripts/*]:** Скрипты установки репозитория
+
+## Непрерывная интеграция
+
+Этот шаблон включает [GitHub Actions](https://github.com/features/actions) [рабочий процесс](.github/workflows/ci.yml), который собирает вашу пользовательскую игру при каждом коммите и завершается ошибкой при наличии ошибок типа.
+    
